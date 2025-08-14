@@ -18,18 +18,18 @@ document.addEventListener('DOMContentLoaded', () => {
           ],
           "arena": { "foto": "images/Foto Amigable.jpg" }, 
           "retadores": [
-            { "nombre": "Bestia", "resultado": "Derrota" },
-            { "nombre": "Marito", "resultado": "Derrota" },
+            { "nombre": "Bestia", "resultado": "N/A" },
+            { "nombre": "Marito", "resultado": "N/A" },
             { "nombre": "Rufa", "resultado": "N/A" },
-            { "nombre": "Tasa", "resultado": "Victoria" },
-            { "nombre": "Pepa", "resultado": "Victoria" },
-            { "nombre": "Fer", "resultado": "Derrota" },
+            { "nombre": "Tasa", "resultado": "N/A" },
+            { "nombre": "Pepa", "resultado": "N/A" },
+            { "nombre": "Fer", "resultado": "N/A" },
             { "nombre": "Bully", "resultado": "N/A" },
-            { "nombre": "Quaso", "resultado": "Derrota" },
-            { "nombre": "Manu", "resultado": "Victoria" },
+            { "nombre": "Quaso", "resultado": "N/A" },
+            { "nombre": "Manu", "resultado": "N/A" },
             { "nombre": "Vago", "resultado": "N/A" },
             { "nombre": "Pappo", "resultado": "Victoria" },
-            { "nombre": "Tuerca", "resultado": "Victoria" }
+            { "nombre": "Tuerca", "resultado": "N/A" }
           ]
         },
         
