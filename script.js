@@ -32,29 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { "nombre": "Tuerca", "resultado": "Victoria" }
           ]
         },
-        {
-          "id": "cuenca",
-          "nombre": "Gimnasio Cuenca",
-          "tipo": "Desconocido",
-          "lider": { "nombre": "Líder Cuenca", "foto": "images/placeholder_lider.png" },
-          "medalla": { "nombre": "Medalla Cuenca", "foto": "images/placeholder_medalla.png" },
-          "equipo": [],
-          "arena": { "foto": "images/placeholder_arena.png" },
-          "retadores": [
-            { "nombre": "Bestia", "resultado": "Victoria" },
-            { "nombre": "Marito", "resultado": "Derrota" },
-            { "nombre": "Rufa", "resultado": "N/A" },
-            { "nombre": "Tasa", "resultado": "Victoria" },
-            { "nombre": "Pepa", "resultado": "Victoria" },
-            { "nombre": "Fer", "resultado": "Derrota" },
-            { "nombre": "Bully", "resultado": "N/A" },
-            { "nombre": "Quaso", "resultado": "Derrota" },
-            { "nombre": "Manu", "resultado": "Victoria" },
-            { "nombre": "Vago", "resultado": "N/A" },
-            { "nombre": "Pappo", "resultado": "Victoria" },
-            { "nombre": "Tuerca", "resultado": "Victoria" }
-          ]
-        }
+        
       ]
     };
 
