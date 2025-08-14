@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
           ],
           "arena": { "foto": "images/Foto Amigable.jpg" }, 
           "retadores": [
-            { "nombre": "Bestia", "resultado": "Victoria" },
+            { "nombre": "Bestia", "resultado": "Derrota" },
             { "nombre": "Marito", "resultado": "Derrota" },
             { "nombre": "Rufa", "resultado": "N/A" },
             { "nombre": "Tasa", "resultado": "Victoria" },
