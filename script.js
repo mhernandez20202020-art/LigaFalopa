@@ -6,13 +6,13 @@ document.addEventListener('DOMContentLoaded', () => {
         authDomain: "ligafalopa.firebaseapp.com",
         databaseURL: "https://ligafalopa-default-rtdb.firebaseio.com",
         projectId: "ligafalopa",
-        storageBucket: "ligafalopa.appspot.com", // Corregí el dominio a .appspot.com que es el estándar
+        storageBucket: "ligafalopa.appspot.com", // Dominio estándar de Firebase
         messagingSenderId: "459689709646",
         appId: "1:459689709646:web:13fed8cf46d40a09e2b31f",
         measurementId: "G-EGQKRTEKJW"
     };
 
-    // Inicializar Firebase
+    // Inicializar Firebase usando el modo de compatibilidad
     firebase.initializeApp(firebaseConfig);
     const db = firebase.firestore();
 
@@ -65,8 +65,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 retadores: gymToUpdate.retadores
             });
             console.log("Resultado actualizado en Firebase!");
-            // Volvemos a dibujar la tabla general para que refleje el cambio de medallas
-            displayGeneralTable();
+            // Actualizamos la tabla general para que refleje el cambio de medallas al instante
+            displayGeneralTable(); 
         } catch (error) {
             console.error("Error actualizando en Firebase: ", error);
         }
@@ -86,7 +86,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     if (retador.resultado === 'Victoria') {
                         challengerSummary[retador.nombre].wins++;
-                        challengerSummary[retador.nombre].medals.push(gym.medalla.foto);
+                        if(gym.medalla && gym.medalla.foto) {
+                           challengerSummary[retador.nombre].medals.push(gym.medalla.foto);
+                        }
                     }
                 });
             }
