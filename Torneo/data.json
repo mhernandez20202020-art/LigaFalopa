@@ -1,0 +1,32 @@
+{
+  "gimnasios": [
+    {
+      "id": "tierra",
+      "nombre": "Gimnasio de Ciudad Verde",
+      "tipo": "Tierra",
+      "lider": {
+        "nombre": "Giovanni",
+        "foto": "images/Foto Lider Tierra.png"
+      },
+      "medalla": {
+        "nombre": "Medalla Tierra",
+        "foto": "images/Medalla tierra.png"
+      },
+      "equipo": [
+        { "nombre": "Rhyhorn", "nivel": 45 },
+        { "nombre": "Dugtrio", "nivel": 42 },
+        { "nombre": "Nidoqueen", "nivel": 44 },
+        { "nombre": "Nidoking", "nivel": 45 },
+        { "nombre": "Rhydon", "nivel": 50 }
+      ],
+      "arena": {
+        "foto": "images/Foto Amigable.png"
+      },
+      "retadores": [
+        { "nombre": "Ash Ketchum", "resultado": "Derrota" },
+        { "nombre": "Gary Oak", "resultado": "Victoria" },
+        { "nombre": "Leaf Green", "resultado": "Victoria" }
+      ]
+    }
+  ]
+}
