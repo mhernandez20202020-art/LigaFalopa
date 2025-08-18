@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { "nombre": "???", "nivel": 100, "imagen": "images/missigno.png" },
             { "nombre": "???", "nivel": 100, "imagen": "images/missigno.png" }
           ],
-          "arena": { "foto": "images/Foto Amigable 2.png" },
+          "arena": { "foto": "images/FotoMarioFondo.png" },
           "retadores": [
             { "nombre": "Bestia", "resultado": "N/A" },
             { "nombre": "Marito", "resultado": "N/A" },
