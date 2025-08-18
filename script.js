@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { "nombre": "Skarmory", "nivel": 100, "imagen": "https://img.pokemondb.net/sprites/home/normal/skarmory.png" },
             { "nombre": "Exeggutor", "nivel": 100, "imagen": "https://img.pokemondb.net/sprites/home/normal/exeggutor.png" }
           ],
-          "arena": { "foto": "images/Foto Amigable.jpg" },
+          "arena": { "foto": "images/Foto Amigable.png" },
           "retadores": [
             { "nombre": "Bestia", "resultado": "N/A" },
             { "nombre": "Marito", "resultado": "N/A" },
@@ -46,20 +46,20 @@ document.addEventListener('DOMContentLoaded', () => {
             { "nombre": "???", "nivel": 100, "imagen": "images/missigno.png" },
             { "nombre": "???", "nivel": 100, "imagen": "images/missigno.png" }
           ],
-          "arena": { "foto": "images/Foto Amigable 2.png" },
+          "arena": { "foto": "images/test.png" },
           "retadores": [
             { "nombre": "Bestia", "resultado": "N/A" },
             { "nombre": "Marito", "resultado": "N/A" },
-            { "nombre": "Rufa", "resultado": "N/A" },
+            { "nombre": "Rufa", "resultado": "Victoria" },
             { "nombre": "Tasa", "resultado": "N/A" },
-            { "nombre": "Pepa", "resultado": "N/A" },
+            { "nombre": "Pepa", "resultado": "Victoria" },
             { "nombre": "Fer", "resultado": "N/A" },
-            { "nombre": "Bully", "resultado": "N/A" },
-            { "nombre": "Quaso", "resultado": "N/A" },
+            { "nombre": "Bully", "resultado": "Victoria" },
+            { "nombre": "Quaso", "resultado": "Victoria" },
             { "nombre": "Manu", "resultado": "N/A" },
             { "nombre": "Vago", "resultado": "N/A" },
             { "nombre": "Pappo", "resultado": "N/A" },
-            { "nombre": "Tuerca", "resultado": "N/A" }
+            { "nombre": "Tuerca", "resultado": "Victoria" }
           ]
         }
       ]
@@ -115,6 +115,12 @@ document.addEventListener('DOMContentLoaded', () => {
         gymName.textContent = 'Tabla General';
         gymBanner.style.backgroundImage = 'none';
         gymBanner.style.backgroundColor = 'white';
+
+        // Restore original body background from style.css
+        document.body.style.backgroundImage = 'url(\'images/Foto Amigable.png\')';
+        document.body.style.backgroundSize = 'contain';
+        document.body.style.backgroundRepeat = 'no-repeat';
+        document.body.style.backgroundColor = '#111'; // Keep this as a fallback if image doesn't load
 
 
         const challengerData = calculateChallengerData();
@@ -178,6 +184,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (selectedGym) {
             gymBanner.style.backgroundImage = `url(${selectedGym.arena.foto})`;
+            gymBanner.style.backgroundSize = 'cover';
+            gymBanner.style.backgroundRepeat = 'no-repeat';
+
+            document.body.style.backgroundImage = `url(${selectedGym.arena.foto})`;
+            document.body.style.backgroundSize = 'cover';
+            document.body.style.backgroundRepeat = 'no-repeat';
             leaderPhoto.src = selectedGym.lider.foto;
             leaderName.textContent = selectedGym.lider.nombre;
             gymName.textContent = selectedGym.nombre;
