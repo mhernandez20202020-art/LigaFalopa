@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
           "nombre": "Gimnasio de Victor Hugo",
           "tipo": "Tierra",
           "lider": { "nombre": "Tasa", "foto": "images/Foto Lider Tierra.png" },
-          "medalla": { "nombre": "Medalla Tierra", "foto": "images/Medalla tierra.png" },
+          "medalla": { "nombre": "Medalla Tierra", "foto": "images/Medalla tierra.png", "icono": "images/TIERRA.png" },
           "equipo": [
             { "nombre": "Donphan", "nivel": 100, "imagen": "https://img.pokemondb.net/sprites/home/normal/donphan.png" },
             { "nombre": "Piloswine", "nivel": 100, "imagen": "https://img.pokemondb.net/sprites/home/normal/piloswine.png" },
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { "nombre": "Skarmory", "nivel": 100, "imagen": "https://img.pokemondb.net/sprites/home/normal/skarmory.png" },
             { "nombre": "Exeggutor", "nivel": 100, "imagen": "https://img.pokemondb.net/sprites/home/normal/exeggutor.png" }
           ],
-          "arena": { "foto": "images/Foto Amigable.jpg" }, 
+          "arena": { "foto": "images/Foto Amigable.jpg" },
           "retadores": [
             { "nombre": "Bestia", "resultado": "N/A" },
             { "nombre": "Marito", "resultado": "N/A" },
@@ -32,7 +32,36 @@ document.addEventListener('DOMContentLoaded', () => {
             { "nombre": "Tuerca", "resultado": "N/A" }
           ]
         },
-        
+        {
+          "id": "beiro-koga",
+          "nombre": "Gimnasio Beiro Koga",
+          "tipo": "Random",
+          "lider": { "nombre": "Mario", "foto": "images/Foto Lider Mario.png" },
+          "medalla": { "nombre": "Medalla Random", "foto": "images/Medalla Random.png", "icono": "images/RANDOM.PNG" },
+          "equipo": [
+            { "nombre": "???", "nivel": 100, "imagen": "images/missigno.png" },
+            { "nombre": "???", "nivel": 100, "imagen": "images/missigno.png" },
+            { "nombre": "???", "nivel": 100, "imagen": "images/missigno.png" },
+            { "nombre": "???", "nivel": 100, "imagen": "images/missigno.png" },
+            { "nombre": "???", "nivel": 100, "imagen": "images/missigno.png" },
+            { "nombre": "???", "nivel": 100, "imagen": "images/missigno.png" }
+          ],
+          "arena": { "foto": "images/Foto Amigable 2.png" },
+          "retadores": [
+            { "nombre": "Bestia", "resultado": "N/A" },
+            { "nombre": "Marito", "resultado": "N/A" },
+            { "nombre": "Rufa", "resultado": "N/A" },
+            { "nombre": "Tasa", "resultado": "N/A" },
+            { "nombre": "Pepa", "resultado": "N/A" },
+            { "nombre": "Fer", "resultado": "N/A" },
+            { "nombre": "Bully", "resultado": "N/A" },
+            { "nombre": "Quaso", "resultado": "N/A" },
+            { "nombre": "Manu", "resultado": "N/A" },
+            { "nombre": "Vago", "resultado": "N/A" },
+            { "nombre": "Pappo", "resultado": "N/A" },
+            { "nombre": "Tuerca", "resultado": "N/A" }
+          ]
+        }
       ]
     };
 
@@ -44,8 +73,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const gymName = document.getElementById('gym-name');
     const medalPhoto = document.getElementById('medal-photo');
     const medalName = document.getElementById('medal-name');
-    const medalInfo = document.querySelector('.medal-info'); 
-    
+    const medalInfo = document.querySelector('.medal-info');
+
     const generalTableSection = document.getElementById('general-table-section');
     const challengerSummaryGrid = document.getElementById('challenger-summary-grid');
     const gymViewSection = document.getElementById('gym-view-section');
@@ -78,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function displayGeneralTable() {
         generalTableSection.style.display = 'block';
         gymViewSection.style.display = 'none';
-        
+
         leaderPhoto.style.display = 'none';
         leaderName.style.display = 'none';
         medalPhoto.style.display = 'none';
@@ -154,11 +183,12 @@ document.addEventListener('DOMContentLoaded', () => {
             gymName.textContent = selectedGym.nombre;
             medalPhoto.src = selectedGym.medalla.foto;
 
+            // Fix: Use selectedGym.medalla.icono for the inline medal image
             const inlineMedalImg = document.createElement('img');
-            inlineMedalImg.src = 'images/TIERRA.png'; 
+            inlineMedalImg.src = selectedGym.medalla.icono;
             inlineMedalImg.alt = selectedGym.medalla.nombre;
             inlineMedalImg.className = 'inline-medal-icon';
-            
+
             medalInfo.innerHTML = ''; 
 
             const medalImagesContainer = document.createElement('div');
