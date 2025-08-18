@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { "nombre": "Quaso", "resultado": "N/A" },
             { "nombre": "Manu", "resultado": "N/A" },
             { "nombre": "Vago", "resultado": "N/A" },
-            { "nombre": "Pappo", "resultado": "Victoria" },
+            { "nombre": "Pappo", "resultado": "N/A" },
             { "nombre": "Tuerca", "resultado": "N/A" }
           ]
         },
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { "nombre": "???", "nivel": 100, "imagen": "images/missigno.png" },
             { "nombre": "???", "nivel": 100, "imagen": "images/missigno.png" }
           ],
-          "arena": { "foto": "images/test.png" },
+          "arena": { "foto": "images/Foto Amigable 2.png" },
           "retadores": [
             { "nombre": "Bestia", "resultado": "N/A" },
             { "nombre": "Marito", "resultado": "N/A" },
